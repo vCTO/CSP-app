@@ -1,0 +1,196 @@
+extends layout
+
+block content
+  -data = data || {}
+
+  if errors
+    ul.my-errors
+      for error in errors
+        li= error.msg
+
+  form(action="." method="POST" class="form-cspRegistry")
+    label(for="cspName") Cloud Service Provider Name:
+    input(
+      type="text"
+      id="cspName"
+      name="cspName"
+      class="form-control"
+      value=data.cspName
+    )
+
+    label(for="cspActivityType") Activity Type:
+    input(
+      type="text"
+      id="cspActivityType"
+      name="cspActivityType"
+      class="form-control"
+      value=data.cspActivityType
+    )
+
+    label(for="cspServiceDescription") Service Description:
+    input(
+      type="text"
+      id="cspServiceDescription"
+      name="cspServiceDescription"
+      class="form-control"
+      value=data.cspServiceDescription
+    )
+
+    label(for="cspCountryDelivery") Country Services Delivered From:
+    input(
+      type="text"
+      id="cspCountryDelivery"
+      name="cspCountryDelivery"
+      class="form-control"
+      value=data.cspCountryDelivery
+    )
+
+    label(for="cspServiceCommencementDate") Service Commencement Date:
+    input(
+      type="date"
+      id="cspServiceCommencementDate"
+      name="cspServiceCommencementDate"
+      class="form-control"
+      value=data.cspServiceCommencementDate
+    )
+
+    label(for="cspContractLastRenewalDate") Country Services Delivered From:
+    input(
+      type="date"
+      id="cspContractLastRenewalDate"
+      name="cspContractLastRenewalDate"
+      class="form-control"
+      value=data.cspContractLastRenewalDate
+    )
+
+    label(for="cspApplicableLaw") Contract Applicable Law:
+    input(
+      type="text"
+      id="cspApplicableLaw"
+      name="cspApplicableLaw"
+      class="form-control"
+      value=data.cspApplicableLaw
+    )
+
+    label(for="cspContractNextRenewalDate") Contract Next Renewal Date:
+    input(
+      type="date"
+      id="cspContractNextRenewalDate"
+      name="cspContractNextRenewalDate"
+      class="form-control"
+      value=data.cspContractNextRenewalDate
+    )
+
+    label(for="cspType") Cloud Service Type:
+    input(
+      type="text"
+      id="cspType"
+      name="cspType"
+      class="form-control"
+      value=data.cspType
+    )
+
+    label(for="cspParties") Parties Utilizing Service:
+    input(
+      type="text"
+      id="cspParties"
+      name="cspParties"
+      class="form-control"
+      value=data.cspParties
+    )
+
+    label(for="cspApprovalEvidence") Evidence of Approval Provided By:
+    input(
+      type="text"
+      id="cspApprovalEvidence"
+      name="cspApprovalEvidence"
+      class="form-control"
+      value=data.cspApprovalEvidence
+    )
+
+    label(for="cspGovernanceBodyName") Other Governance Body Name:
+    input(
+      type="text"
+      id="cspGovernanceBodyName"
+      name="cspGovernanceBodyName"
+      class="form-control"
+      value=data.cspGovernanceBodyName
+    )
+
+    label(for="cspSubcontractors") Cloud Service Provider Subcontractor Name:
+    input(
+      type="text"
+      id="cspSubcontractors"
+      name="cspSubcontractors"
+      class="form-control"
+      value=data.cspSubcontractors
+    )
+
+    label(for="cspCountryRegister") Country Service Provider Registered In:
+    input(
+      type="text"
+      id="cspCountryRegister"
+      name="cspCountryRegister"
+      class="form-control"
+      value=data.cspCountryRegister
+    )
+
+    label(for="cspMaterialOutsource") Service deemed Material Outsourcing (y/n):
+    input(
+      type="text"
+      id="cspMaterialOutsource"
+      name="cspMaterialOutsource"
+      class="form-control"
+      value=data.cspMaterialOutsource
+    )
+
+    label(for="cspMaterialAssessmentDate") Date of Last Material Outsourcing Assessment:
+    input(
+      type="date"
+      id="cspMaterialAssessmentDate"
+      name="cspMaterialAssessmentDate"
+      class="form-control"
+      value=data.cspMaterialAssessmentDate
+    )
+
+    label(for="cspTimeCriticalSupport") Service Support Time Critical Process\Application (y/n):
+    input(
+      type="text"
+      id="cspTimeCriticalSupport"
+      name="cspTimeCriticalSupport"
+      class="form-control"
+      value=data.cspTimeCriticalSupport
+    )
+
+    label(for="cspSubAssessment") Service Substitutability Assessment:
+    input(
+      type="text"
+      id="cspSubAssessment"
+      name="cspSubAssessment"
+      class="form-control"
+      value=data.cspSubAssessment
+    )
+
+    label(for="cspAltProvider") Service Potential Alternate Provider Name:
+    input(
+      type="text"
+      id="cspAltProvider"
+      name="cspAltProvider"
+      class="form-control"
+      value=data.cspAltProvider
+    )
+
+    label(for="cspLastRiskAssessmentDate") Date of Last Risk Assessment:
+    input(
+      type="date"
+      id="cspLastRiskAssessmentDate"
+      name="cspLastRiskAssessmentDate"
+      class="form-control"
+      value=data.cspLastRiskAssessmentDate
+    )
+
+    input(
+      type="submit"
+      value="Submit"
+      class="btn btn-lg btn-primary btn-block"
+    )

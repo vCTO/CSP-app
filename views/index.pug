@@ -1,0 +1,15 @@
+extends layout
+
+block content
+
+  if registrations.length
+    table.listing-table.table-dark.table-striped
+      tr
+        th Cloud Service Provider Name
+        th Cloud Service Activity Type
+      each registration in registrations
+        tr
+          td= registration.cspName
+          td= registration.cspActivityType
+  else
+    p No registrations yet :(
