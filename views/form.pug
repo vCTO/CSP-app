@@ -9,7 +9,92 @@ block content
         li= error.msg
 
   form(action="." method="POST" class="form-cspRegistry")
-    label(for="cspName") Cloud Service Provider Name:
+    label(for="appName") Application Name:
+    input(
+      type="text"
+      id="appName"
+      class="form-control"
+      value=data.appName
+    )
+
+    label(for="appContactName") Application Contact Name:
+    input(
+      type="text"
+      id="appContactName"
+      class="form-control"
+      value=data.appContactName
+    )    
+
+    label(for="appContactEmail") Application Contact Email:
+    input(
+      type="text"
+      id="appContactEmail"
+      class="form-control"
+      value=data.appContactEmail
+    )  
+
+    label(for="appDomain") Application Domain Name:
+    input(
+      type="text"
+      id="appDomain"
+      class="form-control"
+      value=data.appDomain
+    ) 
+
+    label(for="appPlatform") Application Platform Name:
+    input(
+      type="text"
+      id="appPlatform"
+      class="form-control"
+      value=data.appPlatform
+    ) 
+
+    label(for="appMateriality") Application Assessed as Material (y/n):
+    input(
+      type="text"
+      id="appMateriality"
+      name="appMateriality"
+      class="form-control"
+      value=data.appMateriality
+    )
+    
+    label(for="appRiskProfile") Application Risk Profile:
+    input(
+      type="text"
+      id="appRiskProfile"
+      name="appRiskProfile"
+      class="form-control"
+      value=data.appRiskProfile
+    )
+    
+    label(for="appOpImpact") Operational Impact of Outage
+    input(
+      type="text"
+      id="appOpImpact"
+      name="appOpImpact"
+      class="form-control"
+      value=data.appOpImpact
+    )
+    
+    label(for="appRevImpact") Revenue Impact of Outage
+    input(
+      type="text"
+      id="appRevImpact"
+      name="appRevImpact"
+      class="form-control"
+      value=data.appOpImpact
+    )
+    
+    label(for="appConfidentialityImpact") Impact of Confidentiality Breach or Failure of Data Integrity:
+    input(
+      type="text"
+      id="appConfidentialityImpact"
+      name="appConfidentialityImpact"
+      class="form-control"
+      value=data.appConfidentialityImpact
+    )
+    
+    label(form="cspName") Name of Service Provider:
     input(
       type="text"
       id="cspName"
@@ -17,7 +102,16 @@ block content
       class="form-control"
       value=data.cspName
     )
-
+    
+    label(form="cspParentName") Parent of Service Provider (if any):
+    input(
+      type="text"
+      id="cspParentName"
+      name="cspParentName"
+      class="form-control"
+      value=data.cspParentName
+    )
+    
     label(for="cspActivityType") Activity Type:
     input(
       type="text"
@@ -54,7 +148,7 @@ block content
       value=data.cspServiceCommencementDate
     )
 
-    label(for="cspContractLastRenewalDate") Country Services Delivered From:
+    label(for="cspContractLastRenewalDate") Last Contract Renewal Date:
     input(
       type="date"
       id="cspContractLastRenewalDate"

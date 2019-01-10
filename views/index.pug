@@ -2,14 +2,14 @@ extends layout
 
 block content
 
-  if registrations.length
+  if cloudInstances.length
     table.listing-table.table-dark.table-striped
       tr
         th Cloud Service Provider Name
-        th Cloud Service Activity Type
-      each registration in registrations
+        th Cloud Service Type
+      each cloudInstance in cloudInstances
         tr
-          td= registration.cspName
-          td= registration.cspActivityType
+          td= cloudInstance.cspName
+          td= cloudInstance.cspType
   else
     p No registrations yet :(

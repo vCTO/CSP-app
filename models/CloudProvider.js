@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const cspSchema = new mongoose.Schema({
+const cloudInstanceSchema = new Schema({
   /*
     The name of the application
   */
@@ -254,4 +255,6 @@ const cspSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('CloudProvider', cspSchema);
+const CloudInstance = mongoose.model('cloudInstance', cloudInstanceSchema);
+
+module.exports = CloudInstance;
