@@ -5,11 +5,9 @@ block content
   if cloudInstances.length
     table.listing-table.table-dark.table-striped
       tr
-        th Cloud Service Provider Name
-        th Cloud Service Type
-      each cloudInstance in cloudInstances
+        th Activity Type
+      each cInstance in cloudInstances
         tr
-          td= cloudInstance.cspActivityType
-          td= cloudInstance.cspType
+          td= cInstance.cspServiceDescription
   else
     p No registrations yet :(
