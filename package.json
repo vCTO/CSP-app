@@ -14,11 +14,19 @@
     "express": "^4.16.4",
     "express-validator": "^5.3.1",
     "http-auth": "^3.2.3",
-    "mongoose": "^5.4.1",
-    "pug": "^2.0.3"
+    "mongoose": ">=5.7.5",
+    "pug": ">=3.0.1"
   },
   "devDependencies": {
     "nodemon": "^1.18.9"
   },
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vCTO/CSP-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vCTO/CSP-app/issues"
+  },
+  "homepage": "https://github.com/vCTO/CSP-app#readme"
 }
